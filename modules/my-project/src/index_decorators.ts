@@ -39,7 +39,7 @@ export class TestingPlugin extends KotoriPlugin<Tsu.infer<typeof TestingPlugin.s
 
   @plugin.command({
     template: 'echo <content> [num:number=3]',
-    scope: MessageScope.GROUP
+    scope: MessageScope.PRIVATE
   })
   public echo(data: { args: [string]; options: { num: number } }, session: SessionMsg) {
     this.ctx.logger.debug(data, data.args[0])
