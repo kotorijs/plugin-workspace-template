@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "private": true,
   "license": "GPL-3.0",
-  "author": "module-author",
+  "author": "Anonymous",
   "scripts": {
     "serve": "kotori",
     "build": "rm -rf ./modules/*/tsconfig.tsbuildinfo && pnpm -r exec tsup --define.env=prod && pnpm -r exec tsc --build",
