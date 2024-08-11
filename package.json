@@ -1,6 +1,6 @@
 {
-  "name": "kotori-workpsace",
-  "description": "kotori workpsace project",
+  "name": "kotori-plugin-workspace",
+  "description": "kotori plugin workspace project",
   "version": "1.0.0",
   "private": true,
   "license": "GPL-3.0",
@@ -34,30 +34,20 @@
     "node": ">=17.9.0"
   },
   "nodemonConfig": {
-    "exec": "pnpm --filter \"./modules/*\" exec \"tsup-node --silent\" && tsx scripts/dev",
+    "exec": "pnpm --filter \"./modules/*\" exec \"tsup-node --silent\" && kotori --mode dev",
     "ext": "ts,toml,json",
-    "ignore": [
-      "dist",
-      "lib",
-      "data",
-      "log",
-      "tsconfig.json",
-      "tsup.config.ts",
-      "scripts",
-      "tests",
-      "*.test.ts"
-    ]
+    "ignore": ["dist", "lib", "data", "log", "tsconfig.json", "tsup.config.ts", "scripts", "tests", "*.test.ts"]
   },
   "dependencies": {
-    "@kotori-bot/kotori-plugin-access": "^1.0.0",
-    "@kotori-bot/kotori-plugin-adapter-cmd": "^1.1.0",
-    "@kotori-bot/kotori-plugin-adapter-sandbox": "^1.0.0",
-    "@kotori-bot/kotori-plugin-alias": "^1.0.0",
-    "@kotori-bot/kotori-plugin-core": "^1.3.1",
-    "@kotori-bot/kotori-plugin-filter": "^1.0.0",
-    "@kotori-bot/kotori-plugin-helper": "^1.3.0",
+    "kotori-bot": "^1.6.3",
+    "@kotori-bot/kotori-plugin-access": "^1.0.2",
+    "@kotori-bot/kotori-plugin-adapter-cmd": "^1.1.1",
+    "@kotori-bot/kotori-plugin-adapter-sandbox": "^1.1.0",
+    "@kotori-bot/kotori-plugin-alias": "^1.0.2",
+    "@kotori-bot/kotori-plugin-core": "^1.4.4",
+    "@kotori-bot/kotori-plugin-filter": "^1.1.0",
+    "@kotori-bot/kotori-plugin-helper": "^1.3.1",
     "@kotori-bot/kotori-plugin-status": "^1.0.0",
-    "@kotori-bot/kotori-plugin-webui": "^1.1.3",
-    "kotori-bot": "^1.5.3"
+    "@kotori-bot/kotori-plugin-webui": "^1.3.0"
   }
 }
